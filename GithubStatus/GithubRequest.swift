@@ -30,6 +30,7 @@ class GithubRequest {
         let stringDate = dateFormatter.string(from: currentDate)
         let pattern = "data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
         let digit = pattern.r?.findFirst(in: html)?.group(at: 1)
+        print(digit)
         self.delegate?.githubRequestDidUpdate(count: digit);
     }
     
