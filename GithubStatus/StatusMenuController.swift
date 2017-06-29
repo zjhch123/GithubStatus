@@ -55,22 +55,8 @@ class StatusMenuController: NSObject, GithubRequestDelegate, PreferencesWindowDe
         statusMenuItem.view = statusView
         statusView.usernameTextField.stringValue = getDefaultUser()
         updateCount()
-        
-        let statusButton = statusItem.button!
-        
-        statusButton.action = #selector(self.statusBarButtonClicked(sender:))
-        statusButton.sendAction(on: [.leftMouseUp, .rightMouseUp])
     }
     
-    
-    func statusBarButtonClicked(sender: NSStatusBarButton) {
-        let event = NSApp.currentEvent!
-        
-        if event.type == NSEventType.rightMouseUp {
-            print("Right click")
-        } else {
-            print("Left click")
-        }    }
     
     @IBAction func quitClicked(_ sender: AnyObject) {
         NSApplication.shared().terminate(self)
