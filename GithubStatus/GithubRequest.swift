@@ -48,6 +48,7 @@ class GithubRequest {
                     print("error: \(err.localizedDescription)")
                     return
                 }
+                print("ok")
                 self.getCountFrom(html: response.description)
             }
         } catch let error {
