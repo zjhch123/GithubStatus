@@ -21,6 +21,17 @@
         </customObject>
         <menu id="cCI-tu-hcu">
             <items>
+                <menuItem title="Update" id="6OF-58-atm">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="updateClicked:" target="Nb7-Hw-jCS" id="BNM-D6-uK1"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="1fG-Yq-vOM"/>
+                <menuItem title="Status" id="BKH-cK-W8w">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="n8I-IQ-IqC"/>
                 <menuItem title="Quit" id="0TP-c1-H5c">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
