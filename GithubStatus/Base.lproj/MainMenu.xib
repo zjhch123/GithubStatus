@@ -17,6 +17,7 @@
         <customObject id="Nb7-Hw-jCS" customClass="StatusMenuController" customModule="GithubStatus" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="cCI-tu-hcu" id="BtY-HK-dQt"/>
+                <outlet property="statusView" destination="aB1-Ab-zGs" id="vxd-aR-0oX"/>
             </connections>
         </customObject>
         <menu id="cCI-tu-hcu">
@@ -43,5 +44,43 @@
                 <outlet property="delegate" destination="Nb7-Hw-jCS" id="bNh-Vs-XAd"/>
             </connections>
         </menu>
+        <customView id="aB1-Ab-zGs" customClass="StatusView" customModule="GithubStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-WB-Unr">
+                    <rect key="frame" x="74" y="42" width="163" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username" id="PLK-k0-lKM">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2be-I7-1vw">
+                    <rect key="frame" x="74" y="19" width="163" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="iqW-Zy-VHS">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ia-pk-jDh">
+                    <rect key="frame" x="20" y="15" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon" id="hqF-Cy-8ia"/>
+                </imageView>
+            </subviews>
+            <connections>
+                <outlet property="countTextField" destination="2be-I7-1vw" id="Dva-Uz-NYz"/>
+                <outlet property="imageView" destination="1ia-pk-jDh" id="i6i-ed-41E"/>
+                <outlet property="usernameTextField" destination="K5G-WB-Unr" id="EPP-cq-Bb5"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="349.5"/>
+        </customView>
     </objects>
+    <resources>
+        <image name="icon" width="560" height="560"/>
+    </resources>
 </document>

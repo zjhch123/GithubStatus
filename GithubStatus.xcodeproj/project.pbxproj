@@ -12,6 +12,7 @@
 		30481AAC1F03E772008751F1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30481AAA1F03E772008751F1 /* MainMenu.xib */; };
 		30481AB41F03EAF9008751F1 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30481AB31F03EAF9008751F1 /* StatusMenuController.swift */; };
 		306C65401F04C1200017DE33 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C653F1F04C1200017DE33 /* GithubRequest.swift */; };
+		306C65421F04C9530017DE33 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C65411F04C9530017DE33 /* StatusView.swift */; };
 		FDCEAE9854B019A94B7F21B5 /* Pods_GithubStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD706AC20DECAA7FB6E9F90 /* Pods_GithubStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		30481AAD1F03E772008751F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30481AB31F03EAF9008751F1 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		306C653F1F04C1200017DE33 /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		306C65411F04C9530017DE33 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		39B255EC775029C9BB6549A4 /* Pods-GithubStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubStatus/Pods-GithubStatus.release.xcconfig"; sourceTree = "<group>"; };
 		704EF5F6800F02B6764B10E0 /* Pods-GithubStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubStatus/Pods-GithubStatus.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				30481AAD1F03E772008751F1 /* Info.plist */,
 				30481AB31F03EAF9008751F1 /* StatusMenuController.swift */,
 				306C653F1F04C1200017DE33 /* GithubRequest.swift */,
+				306C65411F04C9530017DE33 /* StatusView.swift */,
 			);
 			path = GithubStatus;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				306C65401F04C1200017DE33 /* GithubRequest.swift in Sources */,
 				30481AB41F03EAF9008751F1 /* StatusMenuController.swift in Sources */,
+				306C65421F04C9530017DE33 /* StatusView.swift in Sources */,
 				30481AA71F03E772008751F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import SwiftHTTP
 import Regex
 
 protocol GithubRequestDelegate {
-    func githubRequestDidUpdate(count: String?)
+    func githubRequestDidUpdate(username: String, count: String?)
 }
 
 class GithubRequest {
@@ -22,7 +22,7 @@ class GithubRequest {
         self.delegate = delegate
     }
     
-    func getCountFrom(html: String) {
+    func getCountFrom(html: String, username: String) {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -31,7 +31,7 @@ class GithubRequest {
         let pattern = "data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
         let digit = pattern.r?.findFirst(in: html)?.group(at: 1)
         print(digit)
-        self.delegate?.githubRequestDidUpdate(count: digit);
+        self.delegate?.githubRequestDidUpdate(username: username, count: digit);
     }
     
     func request(username: String) {
@@ -50,7 +50,7 @@ class GithubRequest {
                     return
                 }
                 print("ok")
-                self.getCountFrom(html: response.description)
+                self.getCountFrom(html: response.description, username: username)
             }
         } catch let error {
             print("an error occur: \(error.localizedDescription)")

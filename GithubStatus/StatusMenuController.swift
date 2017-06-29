@@ -14,26 +14,15 @@ class StatusMenuController: NSObject, GithubRequestDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
     var githubRequest: GithubRequest!
-
+    
     @IBOutlet weak var statusMenu: NSMenu!
-    
-    
-    @IBAction func quitClicked(_ sender: AnyObject) {
-        NSApplication.shared().terminate(self)
-    }
+    @IBOutlet weak var statusView: StatusView!
+    var statusMenuItem: NSMenuItem!
 
-    @IBAction func updateClicked(_ sender: AnyObject) {
-        renderCountFrom(username: "zjhch123")
-    }
-    
-    func githubRequestDidUpdate(count: String?) {
-        if let status = self.statusMenu.item(withTitle: "Status") , let _count = count{
-            status.title = _count
+    func githubRequestDidUpdate(username: String, count: String?) {
+        if let _count = count {
+            statusView.update(username: username, count: _count)
         }
-    }
-    
-    func renderCountFrom(username: String) {
-        githubRequest.request(username: username);
     }
     
     override func awakeFromNib() {
@@ -43,8 +32,16 @@ class StatusMenuController: NSObject, GithubRequestDelegate {
         icon?.isTemplate = false // best for dark mode
         statusItem.image = icon
         statusItem.menu = statusMenu
+        statusMenuItem = statusMenu.item(withTitle: "Status")
+        statusMenuItem.view = statusView
     }
     
+    @IBAction func quitClicked(_ sender: AnyObject) {
+        NSApplication.shared().terminate(self)
+    }
     
+    @IBAction func updateClicked(_ sender: AnyObject) {
+        githubRequest.request(username: "zjhch123");
+    }
     
 }
