@@ -22,7 +22,7 @@
         </customObject>
         <menu id="cCI-tu-hcu">
             <items>
-                <menuItem title="Update" id="6OF-58-atm">
+                <menuItem title="刷新" id="6OF-58-atm">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="updateClicked:" target="Nb7-Hw-jCS" id="BNM-D6-uK1"/>
@@ -33,7 +33,14 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="n8I-IQ-IqC"/>
-                <menuItem title="Quit" id="0TP-c1-H5c">
+                <menuItem title="设置账号" id="TU6-09-OiB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesClicked:" target="Nb7-Hw-jCS" id="Swa-bu-K84"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="D9V-dU-kae"/>
+                <menuItem title="退出" id="0TP-c1-H5c">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="quitClicked:" target="Nb7-Hw-jCS" id="IP6-OA-GDa"/>
@@ -49,7 +56,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-WB-Unr">
-                    <rect key="frame" x="74" y="42" width="163" height="17"/>
+                    <rect key="frame" x="79" y="42" width="163" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username" id="PLK-k0-lKM">
                         <font key="font" metaFont="system"/>
@@ -58,10 +65,10 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2be-I7-1vw">
-                    <rect key="frame" x="74" y="19" width="163" height="17"/>
+                    <rect key="frame" x="79" y="19" width="163" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="iqW-Zy-VHS">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="正在获取当日提交次数" id="iqW-Zy-VHS">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
