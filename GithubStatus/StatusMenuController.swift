@@ -47,7 +47,6 @@ class StatusMenuController: NSObject, GithubRequestDelegate, PreferencesWindowDe
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
         githubRequest = GithubRequest(delegate: self)
-        statusItem.menu = statusMenu
         let icon = NSImage(named: "statusIcon")
         icon?.isTemplate = false // best for dark mode
         statusItem.image = icon
@@ -55,9 +54,23 @@ class StatusMenuController: NSObject, GithubRequestDelegate, PreferencesWindowDe
         statusMenuItem = statusMenu.item(withTitle: "Status")
         statusMenuItem.view = statusView
         statusView.usernameTextField.stringValue = getDefaultUser()
-        updateCount();
+        updateCount()
+        
+        let statusButton = statusItem.button!
+        
+        statusButton.action = #selector(self.statusBarButtonClicked(sender:))
+        statusButton.sendAction(on: [.leftMouseUp, .rightMouseUp])
     }
     
+    
+    func statusBarButtonClicked(sender: NSStatusBarButton) {
+        let event = NSApp.currentEvent!
+        
+        if event.type == NSEventType.rightMouseUp {
+            print("Right click")
+        } else {
+            print("Left click")
+        }    }
     
     @IBAction func quitClicked(_ sender: AnyObject) {
         NSApplication.shared().terminate(self)

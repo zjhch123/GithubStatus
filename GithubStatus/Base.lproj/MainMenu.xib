@@ -22,6 +22,10 @@
         </customObject>
         <menu id="cCI-tu-hcu">
             <items>
+                <menuItem title="Github Status" enabled="NO" id="Bff-al-mz2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="iu1-mb-7u6"/>
                 <menuItem title="刷新" id="6OF-58-atm">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
